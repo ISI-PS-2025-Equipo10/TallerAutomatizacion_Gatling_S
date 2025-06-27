@@ -45,7 +45,6 @@ class AddContactTest extends Simulation{
         .stripPrefix("[")
         .stripSuffix("]")
 
-        println(s"Generated contact: $json") // For debug
         session.set("contactBody", json)
     })
     .exec(
