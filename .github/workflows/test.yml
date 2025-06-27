@@ -38,6 +38,7 @@ jobs:
 
   karate:
     runs-on: ubuntu-latest
+    needs: gatling # wait for gatling tests
 
     steps:
       - name: Checkout code
