@@ -2,7 +2,7 @@ Feature: Add contact
 
   Background:
     * url baseUrl
-    * def login = karate.callSingle('login.feature')
+    * def login = call read('login.feature')
 
   Scenario: Successfully add a contact
     Given path "contacts"
