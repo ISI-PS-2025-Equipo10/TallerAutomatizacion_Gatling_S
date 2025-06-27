@@ -26,8 +26,6 @@ jobs:
           java-version: "17"
           distribution: "temurin"
           cache: maven
-      - name: Build with Maven
-        run: mvn -B clean install --file pom.xml
 
       - name: Test Gatling with Maven
         run: mvn -B clean gatling:test --file pom.xml
