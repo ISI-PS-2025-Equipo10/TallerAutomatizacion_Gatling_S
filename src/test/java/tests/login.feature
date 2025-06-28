@@ -4,6 +4,12 @@ Feature: Login to contact app
     * url baseUrl
     * configure retry = {count: 5, interval: 4000}
 
+  Scenario: Login with invalid credentials
+    Given path 'users','login'
+    And request {"email": "juan@caca.com", "password": "wrongpass"}
+    When method post
+    Then status 401
+
   Scenario: Login with valid credentials
     Given path 'users','login'
     And request {"email": "juan@caca.com", "password": "juancaca"}
